@@ -5,8 +5,8 @@ public class MediaFile extends File {
     public static final int lengthThreshold = 1920;
 
 
-    public MediaFile(String typeOfFile, String author, String description, float fileSize, int height, int length) {
-        super(typeOfFile, author, description, fileSize);
+    public MediaFile(String typeOfFile, User user, String description, float fileSize, int height, int length) {
+        super(typeOfFile, user, description, fileSize);
         this.height = height;
         this.length = length;
     }

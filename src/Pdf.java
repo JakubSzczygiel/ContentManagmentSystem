@@ -1,5 +1,5 @@
-public class Pdf extends File {
-    public Pdf(String author, String description, float fileSize) {
-        super("Pdf", author, description, fileSize);
+public class Pdf extends TextDocument {
+    public Pdf(User user, String description, float fileSize) {
+        super("Pdf", user, description, fileSize);
     }
 }

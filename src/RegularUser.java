@@ -1,6 +1,7 @@
-public class RegularUser extends User {
+public class RegularUser extends NotRegisteredUser {
 
     public RegularUser(String name, String surname, String address) {
-        super(name, surname, address, 2);
+        super(name, surname, address);
+        setAccessLevel(2);
     }
 }

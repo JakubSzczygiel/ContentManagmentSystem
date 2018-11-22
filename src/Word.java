@@ -1,5 +1,5 @@
-public class Word extends File {
-    public Word(String author, String description, float fileSize) {
-        super("Word", author, description, fileSize);
+public class Word extends TextDocument {
+    public Word(User user, String description, float fileSize) {
+        super("Word", user, description, fileSize);
     }
 }

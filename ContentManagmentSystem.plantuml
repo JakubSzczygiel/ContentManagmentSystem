@@ -51,6 +51,12 @@ title __CONTENTMANAGMENTSYSTEM's Class Diagram__\n
   
 
   package  {
+    class TextDocument {
+    }
+  }
+  
+
+  package  {
     abstract class User {
     }
   }
@@ -74,15 +80,17 @@ title __CONTENTMANAGMENTSYSTEM's Class Diagram__\n
   }
   
 
-  AdminUser -up-|> User
+  AdminUser -up-|> RegularUser
+  File o-- User : user
   MediaFile -up-|> File
   NotRegisteredUser -up-|> User
-  Pdf -up-|> File
+  Pdf -up-|> TextDocument
   Picture -up-|> MediaFile
-  RegularUser -up-|> User
+  RegularUser -up-|> NotRegisteredUser
+  TextDocument -up-|> File
   User o-- Validator : validator
   Video -up-|> MediaFile
-  Word -up-|> File
+  Word -up-|> TextDocument
 
 
 right footer
