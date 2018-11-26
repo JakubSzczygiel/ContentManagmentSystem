@@ -6,6 +6,7 @@ public abstract class User {
     private String author;
     private int id;
     private int accessLevel;
+    protected int hashCode;
     private Validator validator = new Validator();
 
     {
@@ -29,6 +30,7 @@ public abstract class User {
         this.name = name;
         this.surname = surname;
         this.address = address;
+        this.hashCode = hashCode();
     }
 
     public Pdf createPdf(String description, float fileSize) {
@@ -46,17 +48,22 @@ public abstract class User {
     }
 
 
-    public void createVideo(String description, float fileSize, int height, int length, double duration) {
+    public Video createVideo(String description, float fileSize, int height, int length, double duration) {
         if (validator.isAccessLevelFine(this, 1) && validator.isSizeIsFine(fileSize) && validator.isResolutionFine(height, length)) {
-            new Video(this, description, fileSize, height, length, duration);
+            return new Video(this, description, fileSize, height, length, duration);
         }
-
+        return null;
     }
 
-    public void createPicture(String description, float fileSize, int height, int length) {
+    public Picture createPicture(String description, float fileSize, int height, int length) {
         if (validator.isAccessLevelFine(this, 1) && validator.isSizeIsFine(fileSize) && validator.isResolutionFine(height, length)) {
-            new Picture(this, description, fileSize, height, length);
+            return new Picture(this, description, fileSize, height, length);
         }
+        return null;
     }
 
+    @Override
+    public int hashCode() {
+        return id * 5 + accessLevel * 4 + name.hashCode() * 3 + surname.hashCode() * 2 + address.hashCode();
+    }
 }

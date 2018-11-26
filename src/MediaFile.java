@@ -12,7 +12,7 @@ public class MediaFile extends File implements Editable {
     }
 
     @Override
-    public void EditFile(Editable editableFile) {
+    public void EditFile() {
         System.out.println("Your media file can be edited");
     }
 }

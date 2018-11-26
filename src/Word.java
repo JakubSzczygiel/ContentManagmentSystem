@@ -4,7 +4,7 @@ public class Word extends TextDocument implements Editable {
     }
 
     @Override
-    public void EditFile(Editable editableFile) {
+    public void EditFile() {
         System.out.println("Your Word document can be edited");
     }
 }

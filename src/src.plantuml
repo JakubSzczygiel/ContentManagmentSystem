@@ -24,6 +24,7 @@ title __SRC's Class Diagram__\n
         - typeOfFile : String
         {static} + threshold : float
         + File()
+        + hashCode()
     }
   }
   
@@ -99,6 +100,7 @@ title __SRC's Class Diagram__\n
         + createWord()
         + createVideo()
         + createPicture()
+        + hashCode()
     }
   }
   
