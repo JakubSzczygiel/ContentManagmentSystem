@@ -10,6 +10,13 @@ title __SRC's Class Diagram__\n
   
 
   package  {
+    interface Editable {
+        {abstract} + EditFile()
+    }
+  }
+  
+
+  package  {
     abstract class File {
         - author : String
         - description : String
@@ -28,6 +35,7 @@ title __SRC's Class Diagram__\n
         {static} + heightThreshold : int
         {static} + lengthThreshold : int
         + MediaFile()
+        + EditFile()
     }
   }
   
@@ -115,12 +123,14 @@ title __SRC's Class Diagram__\n
   package  {
     class Word {
         + Word()
+        + EditFile()
     }
   }
   
 
   AdminUser -up-|> RegularUser
   File o-- User : user
+  MediaFile -up-|> Editable
   MediaFile -up-|> File
   NotRegisteredUser -up-|> User
   Pdf -up-|> TextDocument
@@ -129,6 +139,7 @@ title __SRC's Class Diagram__\n
   TextDocument -up-|> File
   User o-- Validator : validator
   Video -up-|> MediaFile
+  Word -up-|> Editable
   Word -up-|> TextDocument
 
 

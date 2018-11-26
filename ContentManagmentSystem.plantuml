@@ -9,6 +9,12 @@ title __CONTENTMANAGMENTSYSTEM's Class Diagram__\n
   
 
   package  {
+    interface Editable {
+    }
+  }
+  
+
+  package  {
     abstract class File {
     }
   }
@@ -82,6 +88,7 @@ title __CONTENTMANAGMENTSYSTEM's Class Diagram__\n
 
   AdminUser -up-|> RegularUser
   File o-- User : user
+  MediaFile -up-|> Editable
   MediaFile -up-|> File
   NotRegisteredUser -up-|> User
   Pdf -up-|> TextDocument
@@ -90,6 +97,7 @@ title __CONTENTMANAGMENTSYSTEM's Class Diagram__\n
   TextDocument -up-|> File
   User o-- Validator : validator
   Video -up-|> MediaFile
+  Word -up-|> Editable
   Word -up-|> TextDocument
 
 

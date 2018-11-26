@@ -1,4 +1,4 @@
-public class MediaFile extends File {
+public class MediaFile extends File implements Editable {
     private int height;
     private int length;
     public static final int heightThreshold = 1080;
@@ -9,5 +9,10 @@ public class MediaFile extends File {
         super(typeOfFile, user, description, fileSize);
         this.height = height;
         this.length = length;
+    }
+
+    @Override
+    public void EditFile(Editable editableFile) {
+        System.out.println("Your media file can be edited");
     }
 }

@@ -27,5 +27,4 @@ public class Validator {
             return false;
         }
     }
-
 }

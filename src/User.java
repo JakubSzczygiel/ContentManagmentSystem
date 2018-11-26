@@ -31,16 +31,18 @@ public abstract class User {
         this.address = address;
     }
 
-    public void createPdf(String description, float fileSize) {
+    public Pdf createPdf(String description, float fileSize) {
         if (validator.isAccessLevelFine(this, 1) && validator.isSizeIsFine(fileSize)) {
-            new Pdf(this, description, fileSize);
+           return new Pdf(this, description, fileSize);
         }
+        return null;
     }
 
-    public void createWord(String description, float fileSize) {
+    public Word createWord(String description, float fileSize) {
         if (validator.isAccessLevelFine(this, 1) && validator.isSizeIsFine(fileSize)) {
-            new Word(this, description, fileSize);
+            return new Word(this, description, fileSize);
         }
+        return null;
     }
 
 
