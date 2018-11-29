@@ -3,7 +3,6 @@ public abstract class User {
     private String name;
     private String surname;
     private String address;
-    private String author;
     private int id;
     private int accessLevel;
     protected int hashCode;
@@ -60,6 +59,15 @@ public abstract class User {
             return new Picture(this, description, fileSize, height, length);
         }
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return ", id=" + id + "|" +
+                name + '|' +
+                surname + '|' +
+                address + '|' +
+                "accessLevel=" + accessLevel;
     }
 
     @Override

@@ -22,6 +22,7 @@ title __SRC's Class Diagram__\n
         - description : String
         - fileSize : float
         - typeOfFile : String
+        # hashCode : int
         {static} + threshold : float
         + File()
         + hashCode()
@@ -92,6 +93,7 @@ title __SRC's Class Diagram__\n
         - author : String
         - id : int
         - accessLevel : int
+        # hashCode : int
         + getAccessLevel()
         + setAccessLevel()
         + getName()
