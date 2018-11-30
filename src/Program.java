@@ -32,18 +32,16 @@ public class Program {
 
         System.out.println(fileStorageList);
 
-
-
-        /*if (word != null)
-            word.EditFile();*/
-        //documents added to TreeSet
+        //documents added to HashSet
         fileStorageSet.filesSet.add(word);
         fileStorageSet.filesSet.add(pdf);
         fileStorageSet.filesSet.add(picture);
         fileStorageSet.filesSet.add(word);
         fileStorageSet.filesSet.add(word);
 
-
         System.out.println(fileStorageSet);
+
+         /*if (word != null)
+            word.EditFile();*/
     }
 }
