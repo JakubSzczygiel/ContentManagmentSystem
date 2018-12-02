@@ -18,14 +18,34 @@ title __SRC's Class Diagram__\n
 
   package  {
     abstract class File {
-        - author : String
         - description : String
         - fileSize : float
         - typeOfFile : String
         # hashCode : int
         {static} + threshold : float
+        {static} + BY_SIZE : Comparator<File>
         + File()
+        + getFileSize()
+        + toString()
+        + equals()
         + hashCode()
+    }
+  }
+  
+
+  package  {
+    class FileStorageList {
+        # filesList : List<File>
+        + toString()
+    }
+  }
+  
+
+  package  {
+    class FileStorageSet {
+        # filesSet : Collection<File>
+        # filesTreeSet : Collection<File>
+        + toString()
     }
   }
   
@@ -90,7 +110,6 @@ title __SRC's Class Diagram__\n
         - name : String
         - surname : String
         - address : String
-        - author : String
         - id : int
         - accessLevel : int
         # hashCode : int
@@ -102,6 +121,7 @@ title __SRC's Class Diagram__\n
         + createWord()
         + createVideo()
         + createPicture()
+        + toString()
         + hashCode()
     }
   }

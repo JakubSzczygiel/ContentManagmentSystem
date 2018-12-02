@@ -21,6 +21,18 @@ title __CONTENTMANAGMENTSYSTEM's Class Diagram__\n
   
 
   package  {
+    class FileStorageList {
+    }
+  }
+  
+
+  package  {
+    class FileStorageSet {
+    }
+  }
+  
+
+  package  {
     class MediaFile {
     }
   }
