@@ -22,7 +22,7 @@ public class Program {
         File picture = Kuba.createPicture("PictureTitle", 32, 1080, 1920);
         File video = Kuba.createVideo("VideoTitle", 31, 1080, 1920, 280);
 
-
+        
         //documents added to list
         fileStorageList.filesList.add(picture);
         fileStorageList.filesList.add(video);
