@@ -34,7 +34,8 @@ public class Program {
         //List printing
         System.out.println(fileStorageList);
 
-        //documents added to hashSet
+        //documents added to HashSet
+
         fileStorageSet.filesSet.add(word);
         fileStorageSet.filesSet.add(pdf);
         fileStorageSet.filesSet.add(picture);
@@ -43,13 +44,11 @@ public class Program {
         fileStorageSet.filesSet.add(word3);
 
         fileStorageSet.filesTreeSet.addAll(fileStorageSet.filesSet);
-        System.out.println(fileStorageSet);
 
         //hashset and treeSet(treeSet sorted over file_size) printing
         System.out.println(fileStorageSet);
 
-
-          /*if (word != null)
+         /*if (word != null)
             word.EditFile();*/
     }
 }
