@@ -24,7 +24,7 @@ public class Program {
 
         //documents added to list
         Collections.addAll(fileStorageList.filesList, picture, video, video, word, pdf);
-        //Sorting ArrayList by file Size - comparator created in File class
+        //Sorting ArrayList by file size - comparator created in File class
         fileStorageList.filesList.sort(File.BY_SIZE);
         //List printing
         System.out.println(fileStorageList);
@@ -35,6 +35,9 @@ public class Program {
 
         //hashset and treeSet(treeSet sorted over file_size) printing
         System.out.println(fileStorageSet);
+
+        float zmienna = 3.14F;
+        System.out.println(zmienna);
 
          /*if (word != null)
             word.EditFile();*/
