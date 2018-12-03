@@ -7,12 +7,12 @@ public abstract class File {
 
     private String description;
     private float fileSize;
-    private String typeOfFile;
+    private TypeOfFile typeOfFile;
     private User user;
     protected int hashCode;
     public static final float threshold = 32000;
 
-    public File(String typeOfFile, User user, String description, float fileSize) {
+    public File(TypeOfFile typeOfFile, User user, String description, float fileSize) {
         this.typeOfFile = typeOfFile;
         this.description = description;
         this.fileSize = fileSize;
@@ -39,7 +39,7 @@ public abstract class File {
     @Override
     public String toString() {
         return
-                typeOfFile + '|' + description + '|' +
+                typeOfFile.toString() + '|' + description + '|' +
                         ", fileSize=" + fileSize + "|" +
                         ", user=" + user + "|" +
                         ", hash=" + hashCode + "|" +
