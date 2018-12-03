@@ -9,6 +9,7 @@ public class FileStorageList {
     @Override
     public String toString() {
         StringBuilder string = new StringBuilder();
+        string.append("FILES LIST \n");
         for (File file : filesList) {
             string.append(file.toString() + "\n");
         }

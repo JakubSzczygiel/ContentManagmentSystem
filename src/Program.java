@@ -22,27 +22,15 @@ public class Program {
         File picture = Kuba.createPicture("PictureTitle", 32, 1080, 1920);
         File video = Kuba.createVideo("VideoTitle", 31, 1080, 1920, 280);
 
-        
         //documents added to list
-        fileStorageList.filesList.add(picture);
-        fileStorageList.filesList.add(video);
-        fileStorageList.filesList.add(video);
-        fileStorageList.filesList.add(word);
-        fileStorageList.filesList.add(pdf);
+        Collections.addAll(fileStorageList.filesList, picture, video, video, word, pdf);
         //Sorting ArrayList by file Size - comparator created in File class
         fileStorageList.filesList.sort(File.BY_SIZE);
         //List printing
         System.out.println(fileStorageList);
 
         //documents added to HashSet
-
-        fileStorageSet.filesSet.add(word);
-        fileStorageSet.filesSet.add(pdf);
-        fileStorageSet.filesSet.add(picture);
-        fileStorageSet.filesSet.add(word);
-        fileStorageSet.filesSet.add(word2);
-        fileStorageSet.filesSet.add(word3);
-
+        Collections.addAll(fileStorageSet.filesSet, word, pdf, picture, word, word2, word3);
         fileStorageSet.filesTreeSet.addAll(fileStorageSet.filesSet);
 
         //hashset and treeSet(treeSet sorted over file_size) printing
