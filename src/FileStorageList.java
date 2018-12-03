@@ -1,10 +1,8 @@
 import java.util.ArrayList;
-//import java.util.Iterator;
 import java.util.List;
 
 public class FileStorageList {
     protected List<File> filesList = new ArrayList<>();
-    //  final Iterator<File> fileIterator= files.iterator();
 
     @Override
     public String toString() {
