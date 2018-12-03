@@ -20,7 +20,6 @@ title __SRC's Class Diagram__\n
     abstract class File {
         - description : String
         - fileSize : float
-        - typeOfFile : String
         # hashCode : int
         {static} + threshold : float
         {static} + BY_SIZE : Comparator<File>
@@ -105,6 +104,17 @@ title __SRC's Class Diagram__\n
   
 
   package  {
+    enum TypeOfFile {
+      PDF
+      WORD
+      PICTURE
+      VIDEO
+      typeOfFileName
+    }
+  }
+  
+
+  package  {
     abstract class User {
         {static} - counter : int
         - name : String
@@ -153,6 +163,7 @@ title __SRC's Class Diagram__\n
   
 
   AdminUser -up-|> RegularUser
+  File o-- TypeOfFile : typeOfFile
   File o-- User : user
   MediaFile -up-|> Editable
   MediaFile -up-|> File

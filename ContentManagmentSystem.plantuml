@@ -75,6 +75,12 @@ title __CONTENTMANAGMENTSYSTEM's Class Diagram__\n
   
 
   package  {
+    enum TypeOfFile {
+    }
+  }
+  
+
+  package  {
     abstract class User {
     }
   }
@@ -99,6 +105,7 @@ title __CONTENTMANAGMENTSYSTEM's Class Diagram__\n
   
 
   AdminUser -up-|> RegularUser
+  File o-- TypeOfFile : typeOfFile
   File o-- User : user
   MediaFile -up-|> Editable
   MediaFile -up-|> File

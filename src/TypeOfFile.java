@@ -1,6 +1,14 @@
 public enum TypeOfFile {
-    PDF,
-    WORD,
-    PICTURE,
-    VIDEO,
+    PDF("Pdf"),
+    WORD("Word"),
+    PICTURE("Picture"),
+    VIDEO("Video");
+
+    protected String typeOfFileName;
+
+    TypeOfFile(String stringTypeOfFile) {
+        this.typeOfFileName = stringTypeOfFile;
+    }
+
+
 }

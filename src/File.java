@@ -39,7 +39,7 @@ public abstract class File {
     @Override
     public String toString() {
         return
-                typeOfFile.toString() + '|' + description + '|' +
+                typeOfFile.typeOfFileName + '|' + description + '|' +
                         ", fileSize=" + fileSize + "|" +
                         ", user=" + user + "|" +
                         ", hash=" + hashCode + "|" +
