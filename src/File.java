@@ -31,9 +31,14 @@ public abstract class File {
             return Float.compare(o1.getFileSize(), o2.getFileSize());
         }
     };*/
+    public static final Comparator<File> BY_TYPE_OF_FILE = comparing(File::getTypeOfFile);
 
     public float getFileSize() {
         return fileSize;
+    }
+
+    public TypeOfFile getTypeOfFile() {
+        return typeOfFile;
     }
 
     @Override

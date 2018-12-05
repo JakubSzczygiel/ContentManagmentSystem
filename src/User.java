@@ -5,6 +5,7 @@ public abstract class User {
     private String address;
     private int id;
     private int accessLevel;
+    private int index;
 
     protected int hashCode;
     private Validator validator = new Validator();

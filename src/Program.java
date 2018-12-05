@@ -29,6 +29,11 @@ public class Program {
         //List printing
         System.out.println(fileStorageList);
 
+        //Sorting ArrayList by Enum
+        fileStorageList.filesList.sort(File.BY_TYPE_OF_FILE);
+        System.out.println(fileStorageList);
+        //
+
         //documents added to HashSet
         Collections.addAll(fileStorageSet.filesSet, word, pdf, picture, word, word2, word3);
         fileStorageSet.filesTreeSet.addAll(fileStorageSet.filesSet);
@@ -38,6 +43,8 @@ public class Program {
 
         float zmienna = 3.14F;
         System.out.println(zmienna);
+
+
 
          /*if (word != null)
             word.EditFile();*/
